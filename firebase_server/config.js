@@ -1,4 +1,5 @@
 const firebase = require("firebase");
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAtSdX1gla07DBkjFEHXqL32VvZRgLsuvQ",
@@ -10,8 +11,9 @@ const firebaseConfig = {
   measurementId: "G-5KVYJQD5GL",
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
+const storage = getStorage(app);
 const db = firebase.firestore();
 const Questions = db.collection("Questions");
 const Submissions = db.collection("Submissions");
-module.exports = { Submissions, Questions };
+module.exports = { Submissions, Questions, storage };

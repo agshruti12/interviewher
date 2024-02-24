@@ -1,8 +1,4 @@
-const {
-  Submissions,
-  Questions,
-  storage,
-} = require("../../firebase_server/config");
+const { Submissions, Questions, storage } = require("./config");
 const { useState } = require("react");
 const { ref, uploadBytes } = require("firebase/storage");
 
