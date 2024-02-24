@@ -60,9 +60,9 @@ const App = () => {
   return (
     <div className="app">
       <h1>InterviewHer</h1>
-        <Routes>
+        {/* <Routes>
           <Route path="/tips" element ={<Tips />} />
-        </Routes>
+        </Routes> */}
       <div className="search">
         <input
           value={searchTerm}
