@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 
 const VideoCard = ({ movie1}) => {
     return (
       <div className="movie">
         <div>
-          <p>{movie1.Year}</p>
+          <p>{movie1.id}</p>
         </div>
   
         <div>
@@ -12,8 +14,14 @@ const VideoCard = ({ movie1}) => {
         </div>
   
         <div>
-          <span>{movie1.Type}</span>
-          <h3>{movie1.Title}</h3>
+          {/* <span>
+          <Link to={'./pages/Strengths.js'}>{movie1.question}</Link>
+
+            </span> */}
+
+          <h3>
+          <Link to={'/tips'}>{movie1.question}</Link>
+            </h3>
         </div>
       </div>
     );
