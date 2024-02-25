@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
+import photo from './profile-icon-512x512-w0uaq4yr.png';
 
 const VideoCard = ({ movie1}) => {
     return (
       <div className="movie">
         <div>
-          <p>{movie1.id}</p>
+          {/* <p>{movie1.id}</p> */}
         </div>
   
-        <div>
-          <img src={movie1.Poster !== "N/A" ? movie1.Poster : "https://via.placeholder.com/400"} alt={movie1.Title} />
+        <div className="photo-container">
+          <img src={photo} alt={movie1.Title} className="photo"/>
         </div>
   
         <div>
@@ -20,7 +20,7 @@ const VideoCard = ({ movie1}) => {
             </span> */}
 
           <h3>
-          <Link to={'/tips'}>{movie1.question}</Link>
+          <Link to={'/upload'}>{movie1.question}</Link>
             </h3>
         </div>
       </div>
